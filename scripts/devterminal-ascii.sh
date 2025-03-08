@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# DevTerminal ASCII Art Banner
+# Improved DevTerminal ASCII Art Banner
 # No dependencies required, pure bash
 
 # Colors
@@ -16,15 +16,14 @@ NC='\033[0m' # No Color
 
 clear
 
-# Pure ASCII art version that doesn't require figlet
+# Super-simple and reliable ASCII art that should work in any terminal
 echo -e "${CYAN}"
 cat << "EOF"
- ______                _____                       _                _ 
-|_   _ \              |_   _|                     (_)              | |
-  | | \ \  ______   __  | | ______  .---.  _ .--.  _  _ .--.   ____| |
-  | |  | ||______| [  | | ||______|/ /__\\[ `.-. | [ |[ '/'`\ |/  _' |
- _| |_.' /          | |_| |_       | \__., | | | |  | || \__/ |  \_| |
-|______.'          |_______|       '.__.'[___||__][___]'.__.' '.___.'
+ ____             _____                   _             _ 
+|  _ \  _____   _|_   _|__ _ __ _ __ ___ (_)_ __   __ _| |
+| | | |/ _ \ \ / / | |/ _ \ '__| '_ ` _ \| | '_ \ / _` | |
+| |_| |  __/\ V /  | |  __/ |  | | | | | | | | | | (_| | |
+|____/ \___| \_/   |_|\___|_|  |_| |_| |_|_|_| |_|\__,_|_|
 EOF
 echo -e "${NC}"
 
@@ -37,26 +36,29 @@ center() {
 
 # Draw a terminal window frame around the content
 draw_terminal_frame() {
-    width=$(tput cols)
-    if [ $width -gt 80 ]; then width=80; fi
+    # Fixed width to ensure consistent display
+    width=78
     
     # Top border
     echo -e "${WHITE}┌$( printf '─%.0s' $(seq 1 $((width-2))) )┐${NC}"
     
     # Title bar
     title=" ● DevTerminal "
-    padding=$(( (width - ${#title} - 2) ))
-    echo -e "${WHITE}│${RED}$title${WHITE}$( printf ' %.0s' $(seq 1 $padding) )│${NC}"
+    echo -e "${WHITE}│${RED}$title${WHITE}$( printf ' %.0s' $(seq 1 $((width - ${#title} - 2))) )│${NC}"
     
     # Separator
     echo -e "${WHITE}├$( printf '─%.0s' $(seq 1 $((width-2))) )┤${NC}"
     
-    # Content (passed as arguments)
+    # Content (passed as arguments) - left aligned with fixed padding
     for line in "$@"; do
-        padding=$(( (width - ${#line} - 2) ))
-        if [ $padding -lt 0 ]; then padding=0; fi
-        half_padding=$(( padding / 2 ))
-        echo -e "${WHITE}│$( printf ' %.0s' $(seq 1 $half_padding) )${NC}${line}${WHITE}$( printf ' %.0s' $(seq 1 $((padding - half_padding))) )│${NC}"
+        # Strip ANSI color codes for width calculation
+        plain_line=$(echo -e "$line" | sed 's/\x1B\[[0-9;]*[JKmsu]//g')
+        right_padding=$(( width - ${#plain_line} - 4 ))  # 4 spaces from left + content width
+        
+        if [ $right_padding -lt 0 ]; then right_padding=0; fi
+        
+        # Left align with 2 spaces of padding
+        echo -e "${WHITE}│  ${NC}${line}${WHITE}$( printf ' %.0s' $(seq 1 $right_padding) )│${NC}"
     done
     
     # Bottom border
