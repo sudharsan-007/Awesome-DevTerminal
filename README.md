@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-![DevTerminal - Your Command Line Arsenal](assets/banner.gif)
+<p align="center"><img src="assets/banner.gif" alt="DevTerminal - Your Command Line Arsenal"></p>
 
 A meticulously curated collection of 166 powerful command-line tools organized by category to enhance developer productivity, streamline workflows, and transform your terminal into a robust development environment. Our community goal is to reach 500+ quality tools through contributions while maintaining high curation standards.
 
