@@ -1,4 +1,4 @@
-# DevTerminal: The Developer's Comprehensive CLI Arsenal
+# Awesome-DevTerminal: The Developer's Comprehensive CLI Arsenal
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
