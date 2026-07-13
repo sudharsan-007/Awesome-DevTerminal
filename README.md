@@ -220,6 +220,7 @@ Contributions welcome! If you know of a great CLI tool that's not listed here, p
 - [tuxi](https://github.com/Bugswriter/tuxi) - CLI assistant for getting answers to questions instantly.
 - [chatblade](https://github.com/npiv/chatblade) - Versatile CLI tool for interacting with OpenAI's ChatGPT.
 - [tenere](https://github.com/pythops/tenere) - TUI for ChatGPT written in Rust.
+- [codex-profiles](https://github.com/Ducksss/codex-profiles) - Profile launcher for Codex CLI and Desktop with isolated CODEX_HOME state.
 
 ## Security and Privacy
 
