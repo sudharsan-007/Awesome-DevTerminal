@@ -4,11 +4,11 @@
 
 <p align="center"><img src="assets/banner.gif" alt="DevTerminal - Your Command Line Arsenal"></p>
 
-A meticulously curated collection of 166 powerful command-line tools organized by category to enhance developer productivity, streamline workflows, and transform your terminal into a robust development environment. Our community goal is to reach 500+ quality tools through contributions while maintaining high curation standards.
+A meticulously curated collection of 167 powerful command-line tools organized by category to enhance developer productivity, streamline workflows, and transform your terminal into a robust development environment. Our community goal is to reach 500+ quality tools through contributions while maintaining high curation standards.
 
 ## What makes this collection different?
 
-- **Comprehensive scope**: With 166 tools organized into intuitive categories (and growing toward our goal of 500+), this is becoming one of the most extensive CLI collections available
+- **Comprehensive scope**: With 167 tools organized into intuitive categories (and growing toward our goal of 500+), this is becoming one of the most extensive CLI collections available
 - **Developer-focused**: Each tool has been selected with the developer workflow in mind
 - **Practical descriptions**: Clear, concise explanations of what each tool does and why you might want it
 - **Maintained links**: Direct paths to each project's repository or website for easy discovery
@@ -211,6 +211,7 @@ Contributions welcome! If you know of a great CLI tool that's not listed here, p
 
 - [aichat](https://github.com/sigoden/aichat) - All-in-one AI powered CLI chat and copilot.
 - [aider](https://github.com/paul-gauthier/aider) - AI pair programming in your terminal.
+- [Agent QA](https://github.com/vostride/agent-qa) - Source-available CLI for natural-language web and mobile application testing with reusable execution memory and MCP integration.
 - [elia](https://github.com/darrenburns/elia) - TUI ChatGPT client built with Textual.
 - [cai](https://github.com/jkulvich/cai) - Fast CLI tool for prompting LLMs.
 - [chat.sh](https://github.com/peterdemin/chat.sh) - Pipeable LLM wrapper with code execution.
