@@ -120,6 +120,7 @@ Contributions welcome! If you know of a great CLI tool that's not listed here, p
 - [nmap](https://nmap.org) - Network scanner for security auditing.
 - [mtr](https://github.com/traviscross/mtr) - Network diagnostics tool combining ping and traceroute.
 - [bandwhich](https://github.com/imsnif/bandwhich) - Terminal bandwidth utilization tool.
+- [Kilobat CLI](https://github.com/seifip/kilobat-cli) - macOS network diagnostics with JSON output for per-app traffic, Wi-Fi, DNS and host connection checks.
 - [trippy](https://github.com/fujiapple852/trippy) - TUI network diagnostics tool with visualization.
 - [rsync](https://rsync.samba.org) - Fast, versatile file copying tool for remote and local files.
 - [netcat (nc)](http://netcat.sourceforge.net) - TCP/IP swiss army knife for networking.
